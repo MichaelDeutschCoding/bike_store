@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e1849f51-7e6a-4922-94ec-c49993f77590" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="bike-store" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VAjDDcZ94I9PChtEHRyvH5dH7Q" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/rental" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rental/static/rental/images" />
+      <recent name="$PROJECT_DIR$/rental" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e1849f51-7e6a-4922-94ec-c49993f77590" name="Default Changelist" comment="" />
+      <created>1576702671176</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576702671176</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="842" y="199" width="438" height="523" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1576748404899">
+      <screen x="38" y="26" width="1562" height="874" />
+    </state>
+    <state x="842" y="199" width="438" height="523" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/38.26.1562.874@38.26.1562.874" timestamp="1576748404899" />
+    <state x="764" y="181" width="826" height="559" key="DBNavigator.DatasetFilterDialog" timestamp="1576791083729">
+      <screen x="38" y="26" width="1562" height="874" />
+    </state>
+    <state x="764" y="181" width="826" height="559" key="DBNavigator.DatasetFilterDialog/38.26.1562.874@38.26.1562.874" timestamp="1576791083729" />
+    <state x="218" y="81" width="926" height="679" key="DBNavigator.ProjectSettingsDialog" timestamp="1576790956234">
+      <screen x="38" y="26" width="1562" height="874" />
+    </state>
+    <state x="218" y="81" width="926" height="679" key="DBNavigator.ProjectSettingsDialog/38.26.1562.874@38.26.1562.874" timestamp="1576790956234" />
+    <state x="760" y="281" width="426" height="479" key="FileChooserDialogImpl" timestamp="1576793620711">
+      <screen x="38" y="26" width="1562" height="874" />
+    </state>
+    <state x="760" y="281" width="426" height="479" key="FileChooserDialogImpl/38.26.1562.874@38.26.1562.874" timestamp="1576793620711" />
+    <state x="606" y="98" key="SettingsEditor" timestamp="1576744388897">
+      <screen x="38" y="26" width="1562" height="874" />
+    </state>
+    <state x="606" y="98" key="SettingsEditor/38.26.1562.874@38.26.1562.874" timestamp="1576744388897" />
+    <state x="926" y="110" width="503" height="702" key="refactoring.ChangeSignatureDialog" timestamp="1576789807594">
+      <screen x="38" y="26" width="1562" height="874" />
+    </state>
+    <state x="926" y="110" width="503" height="702" key="refactoring.ChangeSignatureDialog/38.26.1562.874@38.26.1562.874" timestamp="1576789807594" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rental/populate.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

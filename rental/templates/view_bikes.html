@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_name %}Bikes{% endblock %}
+
+
+{% block header %}View {{ bike_type }}{% endblock %}
+{% block content %}
+
+<ul class="pagination justify-content-left">
+  {% if page_obj.has_previous %}
+  <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+  {% else %}
+  <li class="page-item disabled"><a class="page-link" href="#"><span>&laquo;</span></a></li>
+  {% endif %}
+  {% for i in paginator.page_range %}
+  {% if page_obj.number == i %}
+  <li class="page-item active"><a class="page-link" href="#">{{ i }} <span class="sr-only">(current)</span></a></li>
+  {% else %}
+  <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+  {% endif %}
+  {% endfor %}
+  {% if page_obj.has_next %}
+  <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+  {% else %}
+  <li class="page-item disabled"><a class="page-link" href="#"><span>&raquo;</span></a></li>
+  {% endif %}
+</ul>
+
+
+<div class="row" style="justify-content: center;">
+{% for bike in page_obj %}
+
+<div class="card m-2 textured-card" style="width: 18rem;">
+  <img src="{% static '/rental/images/scooter.png' %}" class="card-img-top">
+  <div class="card-body">
+    <h4 class="card-title">{{ bike }}</h4>
+    <h6 class="card-subtitle">Purchase for: ${{ bike.real_cost}}.00</h6>
+    <p class="card-text">You'll have so much fun riding this bike all around town!</p>
+{{ bike.id }}<br>
+    <a href="#" class="btn btn-primary">Rent Me!</a>
+  </div>
+</div>
+
+{% endfor %}
+</div>
+
+{% endblock %}

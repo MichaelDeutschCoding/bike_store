@@ -1,0 +1,8 @@
+body{
+    background-image: url(images/road.jpeg);
+}
+
+.textured-card{
+    background-image: url(images/gray.jpg);
+    background-size: cover;
+}

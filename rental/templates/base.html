@@ -1,0 +1,46 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'rental/style.css' %}">
+    {% block page_css %}{% endblock %}
+    <title>Mike Bikes - {% block page_name %}{% endblock %}</title>
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+      <div class="container">
+        <a class="navbar-brand" href="/">Mike's Bikes</a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'customers' %}">Customers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/bike-types/road-bike">Road Bikes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/bike-types/mountain-bike">Mountain Bikes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/bike-types/tandem">Tandems</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/bike-types/scooter">Scooters</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-10">
+          <h1 class="mt-2">{% block header %}{% endblock %}</h1>
+          <hr class="mt-0 mb-4">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

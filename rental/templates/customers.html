@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block page_name %}Customers{% endblock %}
+{% block header %}Our Valued Customers{% endblock%}
+{% block content %}
+
+<ul class="pagination justify-content-left">
+  {% if page_obj.has_previous %}
+  <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+  {% else %}
+  <li class="page-item disabled"><a class="page-link" href="#"><span>&laquo;</span></a></li>
+  {% endif %}
+  {% for i in paginator.page_range %}
+  {% if page_obj.number == i %}
+  <li class="page-item active"><a class="page-link" href="#">{{ i }} <span class="sr-only">(current)</span></a></li>
+  {% else %}
+  <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+  {% endif %}
+  {% endfor %}
+  {% if page_obj.has_next %}
+  <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+  {% else %}
+  <li class="page-item disabled"><a class="page-link" href="#"><span>&raquo;</span></a></li>
+  {% endif %}
+</ul>
+
+
+<div class="row text-center" style="justify-content: center;">
+{% for person in page_obj %}
+<div class="card col-3 m-2 textured-card" style="width:18rem; display: inline-block;">
+  <div class="card-body">
+    <h5 class="card-title">
+      <a href="{% url 'view-single-customer' person.id %}">
+      {{ person.first_name }} {{ person.last_name }}
+      </a>
+    </h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ person.email }}</h6>
+    <p class="card-text">{{ person.phone_number }}</p>
+  </div>
+</div>
+{% endfor%}
+</div>
+
+
+
+
+{% endblock %}
