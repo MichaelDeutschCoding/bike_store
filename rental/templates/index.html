@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block page_name %}Home{% endblock %}
 {% block header %}Welcome to Mike's Bikes{% endblock %}
-{% block content %}
-
-Home Page!
-<a href="{% url 'customers' %}">Customers Page</a>
+{% block content %}<img src="{% static 'rental/images/logo_transparent.png' %}">
 {% endblock %}

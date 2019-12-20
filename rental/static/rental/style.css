@@ -1,8 +1,21 @@
 body{
-    background-image: url(images/road.jpeg);
+    background: linear-gradient(rgba(222,222,222, 0.4), rgba(222,222,222, 0.4)), url(images/road.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .textured-card{
     background-image: url(images/gray.jpg);
     background-size: cover;
+}
+.customer-container {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.customer-card {
+    background: none;
+    border:none;
+    text-align: center;
 }

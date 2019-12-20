@@ -1,7 +1,7 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 
-from rental.models import Customer, Rental, Bicycle
+from rental.models import Customer, Rental, Bicycle, RentalRate
 
 
 def index(request):
@@ -46,4 +46,9 @@ def view_by_type(request, bike_type):
     })
 
 def view_bike_types(request):
-    return render(request, 'bike_types.html')
+    bike_type_list = RentalRate.objects.order_by(
+        'bicycle_type', 'frame_material'
+    )
+    return render(request, 'bike_types.html', {
+        'type_list': bike_type_list
+    })
