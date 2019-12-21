@@ -6,6 +6,9 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('customers/', views.customers, name='customers'),
     path('customer/<int:cust_id>', views.customer, name='view-single-customer'),
-    path('bike-types', views.view_bike_types, name='view-bike-types'),
+    path('bike-types/', views.view_bike_types, name='view-bike-types'),
     path('bike-types/<bike_type>', views.view_by_type, name='view-by-type'),
+    path('add-rental/<int:bike_id>', views.add_rental, name='add-rental'),
+    path('view-bikes', views.view_all_bikes, name='view-all-bikes'),
+    path('bike/<int:bike_id>', views.bike_page, name='view-bike'),
 ]

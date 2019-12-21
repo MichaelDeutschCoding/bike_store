@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_name %}New Rental{% endblock %}
+{% block header %}Add a Rental{% endblock %}
+{% block content %}
+
+<h3>Renting bike #{{ bike.id }}</h3>
+<h5>Cost: ${{ bike.rate }}.00 per day</h5>
+<form method="POST">
+    <h5>Add a rental</h5>
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+    <input type="submit" value="Add">
+</form>
+
+{% endblock %}

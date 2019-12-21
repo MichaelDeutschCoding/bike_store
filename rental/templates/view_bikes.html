@@ -31,14 +31,14 @@
 <div class="row" style="justify-content: center;">
 {% for bike in page_obj %}
 
-<div class="card m-2 textured-card" style="width: 18rem;">
-  <img src="{% static '/rental/images/scooter.png' %}" class="card-img-top">
+<div class="card m-2 textured-card">
+  <img src="{% static bike.img_path %}" class="card-img-top">
   <div class="card-body">
-    <h4 class="card-title">{{ bike }}</h4>
+    <h4 class="card-title">{{ bike|title }}</h4>
     <h6 class="card-subtitle">Purchase for: ${{ bike.real_cost}}.00</h6>
-    <p class="card-text">You'll have so much fun riding this bike all around town!</p>
-{{ bike.id }}<br>
-    <a href="#" class="btn btn-primary">Rent Me!</a>
+    <p class="card-text">You'll have so much fun riding this {{ bike.bicycle_type }} all around town!</p>
+    <p>Bike ID: #{{ bike.id }}</p>
+    <a href="/bike/{{ bike.id }}" class="btn btn-primary">Rent Me!</a>
   </div>
 </div>
 

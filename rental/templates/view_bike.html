@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_name %}Bike Page{% endblock %}
+{% block header %}Bike #{{ bike.id }}{% endblock %}
+{% block content %}
+
+<img src="{% static bike.img_path %}" class="card-img-top">
+<div class="bike-info">
+<h4>{{ bike|title }}</h4>
+<h6>Purchase for: ${{ bike.real_cost}}.00</h6>
+    <h5>Rental Cost: ${{ bike.rate }}.00 per day</h5>
+    <p>Created on: {{ bike.date_created }}</p>
+<p>You'll have so much fun riding this bike all around town!</p>
+<p>Bike ID #{{ bike.id }}</p>
+
+{% if rentals %}
+<table class="table" style="font-size:1rem;">
+    <thead>
+    <tr>
+        <th scope="col">Rental Number</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Rental Start Date</th>
+        <th scope="col">Rental Return Date</th>
+        <th scope="col">Days Rented</th>
+        <th scope="col">Total Cost</th>
+    </tr>
+    </thead>
+    <tbody>
+{% for rental in rentals %}
+<tr>
+    <td>{{ rental.id }}</td>
+    <td>{{ rental.customer.first_name }}</td>
+    <td>{{ rental.customer.last_name }}</td>
+    <td>{{ rental.start_date }}</td>
+    <td>{{ rental.return_date }}</td>
+    <td>{{ rental.duration }}</td>
+    <td><strong>${{ rental.total_cost }}</strong></td>
+</tr>
+{% endfor %}
+    </tbody>
+</table>
+{% else %}
+<hr class="mt-4">
+<h4>No Rental History</h4>
+{% endif %}
+    <a class="btn btn-secondary" href="{% url 'add-rental' bike.id %}">Rent this Bike</a>
+</div>
+
+
+{% endblock %}

@@ -25,8 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="4256b3c0-94d4-4f2b-b651-0a7d7858022a">
-        <schema name="pg_catalog" object-types="function" />
-        <schema name="public" object-types="table, column, sequence, view, dataset trigger, index, constraint, function" />
+        <schema name="public" object-types="table, view" />
       </connection>
     </loaded-nodes>
   </component>
@@ -42,7 +41,12 @@
     <connection id="4256b3c0-94d4-4f2b-b651-0a7d7858022a" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="4256b3c0-94d4-4f2b-b651-0a7d7858022a" dataset="public.rental_bicycletype" active-filter-id="" />
+    <filter-actions connection-id="4256b3c0-94d4-4f2b-b651-0a7d7858022a" dataset="public.rental_bicycletype" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="4256b3c0-94d4-4f2b-b651-0a7d7858022a" dataset="public.rental_framematerial" active-filter-id="">
+      <filter id="2d9e1379-db4d-4e52-bf44-5cdbea0c291d" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

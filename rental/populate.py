@@ -76,4 +76,3 @@ def create_rental(num):
         rental.save()
 
     print(f"Successfully added {added} rentals!")
-

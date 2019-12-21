@@ -29,6 +29,7 @@ class FrameMaterial(models.Model):
 
 class RentalRate(models.Model):
     daily_rate = models.IntegerField()
+    img_path = models.CharField(max_length=100, default='/rental/images/canyon.png')
     bicycle_type = models.ForeignKey(BicycleType, on_delete=models.CASCADE)
     frame_material = models.ForeignKey(FrameMaterial, on_delete=models.CASCADE)
 
@@ -41,6 +42,7 @@ class Bicycle(models.Model):
     date_created = models.DateField()
     bicycle_type = models.ForeignKey(BicycleType, on_delete=models.CASCADE)
     frame_material = models.ForeignKey(FrameMaterial, on_delete=models.CASCADE)
+    img_path = models.CharField(max_length=100, default='/rental/images/canyon.png')
 
     @property
     def rate(self):
@@ -68,14 +70,16 @@ class Bicycle(models.Model):
             if (rental_period.start_date <= start <= rental_period.return_date
                     or rental_period.start_date <= end <= rental_period.return_date):
                 return False
+            if start < rental_period.start_date and end > rental_period.return_date:
+                return False
 
         return True
 
 
 class Rental(models.Model):
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     start_date = models.DateField()
     return_date = models.DateField(null=True, blank=True)
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     bicycle = models.ForeignKey(Bicycle, on_delete=models.CASCADE)
 
     @property

@@ -1,3 +1,7 @@
+
+.dropdown:hover .dropdown-menu {
+   display: block !important;
+}
 body{
     background: linear-gradient(rgba(222,222,222, 0.4), rgba(222,222,222, 0.4)), url(images/road.jpeg);
     background-repeat: no-repeat;
@@ -5,6 +9,7 @@ body{
 }
 
 .textured-card{
+    width: 18rem;
     background-image: url(images/gray.jpg);
     background-size: cover;
 }
@@ -13,9 +18,17 @@ body{
     padding: 10px;
     margin-bottom: 10px;
 }
-
 .customer-card {
     background: none;
     border:none;
     text-align: center;
+}
+.card-img-top {
+    padding: 3px;
+}
+
+.bike-info {
+    padding: 1.5rem;
+    background: rgba(200,204,204,0.6);
+    font-size:1.5rem;
 }

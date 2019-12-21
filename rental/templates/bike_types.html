@@ -3,4 +3,24 @@
 {% block page_name %}Types{% endblock %}
 {% block header %}What kind of ride are you looking for?{% endblock %}
 {% block content %}
+
+<div class="row" style="justify-content: center;">
+{% for element in type_list %}
+
+<div class="card m-2 textured-card">
+  <img src="{% static element.img_path %}" class="card-img-top">
+  <div class="card-body">
+    <h4 class="card-title">{{ element.bicycle_type|upper }}</h4>
+    <h5 class="card-subtitle">Frame Material: {{ element.frame_material }}</h5>
+    <h5 class="card-text">Rent for: ${{ element.daily_rate}}.00 per Day</h5>
+    <p class="card-text">You'll have so much fun riding this {{ element.bicycle_type }} all around town!</p>
+{{ bike.id }}<br>
+    <a href="#" class="btn btn-primary">Rent Me!</a>
+  </div>
+</div>
+
+{% endfor %}
+</div>
+
+
 {% endblock %}
