@@ -37,3 +37,9 @@ class AddRentalForm(forms.ModelForm):
         if start > date.today():
             msg = 'Sorry, at this time we cannot reserve rentals for the future'
             self.add_error('start_date', msg)
+
+
+class AddCustomerForm(forms.ModelForm):
+    class Meta:
+        model = Customer
+        fields = '__all__'

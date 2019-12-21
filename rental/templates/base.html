@@ -15,12 +15,6 @@
       <div class="container">
         <a class="navbar-brand" href="/">Mike's Bikes</a>
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'customers' %}">Customers</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'view-all-bikes' %}">View All Bikes</a>
-          </li>
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="{% url 'view-bike-types' %}}">
                     Bicycle Types
@@ -31,6 +25,15 @@
                 <a class="dropdown-item" href="/bike-types/tandem">Tandems</a>
                 <a class="dropdown-item" href="/bike-types/scooter">Scooters</a>
               </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'view-all-bikes' %}">View All Bikes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'customers' %}">Customers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'view-all-rentals' %}">Rental History</a>
           </li>
         </ul>
 

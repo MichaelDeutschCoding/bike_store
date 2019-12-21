@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 
 {% block page_name %}Customers{% endblock %}
-{% block header %}Our Valued Customers{% endblock%}
+{% block header %}Our Valued Customers
+<a href="{% url 'add-customer' %}" class="btn btn-secondary">New Customer</a>
+{% endblock%}
 {% block content %}
 
 <ul class="pagination justify-content-center">
@@ -40,8 +42,6 @@
 </div>
 {% endfor%}
 </div>
-
-
 
 
 {% endblock %}

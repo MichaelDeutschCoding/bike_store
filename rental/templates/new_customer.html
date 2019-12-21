@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_name %}New Customer{% endblock %}
+{% block header %}Add a New Customer{% endblock %}
+{% block content %}
+
+<h2>Welcome to our community!</h2>
+<form method="POST">
+    <h6>Customer Info:</h6>
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" class="btn btn-secondary" value="Join">
+</form>
+
+{% endblock %}

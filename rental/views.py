@@ -2,7 +2,7 @@ from django.core.exceptions import ValidationError
 from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 
-from rental.forms import AddRentalForm
+from rental.forms import AddRentalForm, AddCustomerForm
 from rental.models import Customer, Rental, Bicycle, RentalRate
 
 
@@ -20,7 +20,7 @@ def customers(request):
         'page_obj': customers})
 
 
-def customer(request, cust_id):
+def view_customer(request, cust_id):
     try:
         customer = Customer.objects.get(id=cust_id)
     except Customer.DoesNotExist:
@@ -114,4 +114,28 @@ def add_rental(request, bike_id):
     return render(request, 'add_rental.html', {
         'form': form,
         'bike': bike
+    })
+
+def add_customer(request):
+    if request.method == 'POST':
+        form = AddCustomerForm(request.POST)
+        if form.is_valid():
+            new_customer = Customer(**form.cleaned_data)
+            new_customer.save()
+            print(new_customer)
+            return redirect('view-single-customer', new_customer.id)
+
+    else:
+        form = AddCustomerForm()
+
+    return render(request, 'new_customer.html', {'form': form})
+
+def view_all_rentals(request):
+    rental_list = Rental.objects.order_by('-return_date')
+    paginator = Paginator(rental_list, 15)
+    page = request.GET.get('page')
+    rentals = paginator.get_page(page)
+    return render(request, 'view_rentals.html', {
+        'paginator': paginator,
+        'page_obj': rentals
     })

@@ -10,7 +10,7 @@ class Customer(models.Model):
     phone_number = models.CharField(max_length=15)
 
     def __str__(self):
-        return f'{self.first_name} {self.last_name} ID: {self.id}'
+        return f'#{self.id:<3}  {self.first_name} {self.last_name}'
 
 
 class BicycleType(models.Model):

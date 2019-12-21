@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_name %}Rental History{% endblock %}
+
+
+{% block header %}View All Rentals{% endblock %}
+{% block content %}
+
+<ul class="pagination justify-content-center">
+  {% if page_obj.has_previous %}
+  <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+  {% else %}
+  <li class="page-item disabled"><a class="page-link" href="#"><span>&laquo;</span></a></li>
+  {% endif %}
+  {% for i in paginator.page_range %}
+  {% if page_obj.number == i %}
+  <li class="page-item active"><a class="page-link" href="#">{{ i }} <span class="sr-only">(current)</span></a></li>
+  {% else %}
+  <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+  {% endif %}
+  {% endfor %}
+  {% if page_obj.has_next %}
+  <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+  {% else %}
+  <li class="page-item disabled"><a class="page-link" href="#"><span>&raquo;</span></a></li>
+  {% endif %}
+</ul>
+
+<table class="table" style="background: rgba(255,255,255, 0.5)">
+    <thead>
+    <tr>
+        <th scope="col">Customer ID</th>
+        <th scope="col">Customer Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Bike ID</th>
+        <th scope="col">Bike Replacement Cost</th>
+        <th scope="col">Bicycle Description</th>
+        <th scope="col">Rental Start Date</th>
+        <th scope="col">Rental Return Date</th>
+        <th scope="col">Days Rented</th>
+        <th scope="col">Cost per Day</th>
+        <th scope="col">Total Cost</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for rental in page_obj %}
+        <tr>
+            <td>{{ rental.customer.id }}</td>
+            <td>{{ rental.customer.first_name }} {{ rental.customer.last_name }}</td>
+            <td>{{ rental.customer.email }}</td>
+            <td>{{ rental.bicycle.id }}</td>
+            <td>${{ rental.bicycle.real_cost }}</td>
+            <td>{{ rental.bicycle }}</td>
+            <td>{{ rental.start_date }}</td>
+            <td>{{ rental.return_date }}</td>
+            <td>{{ rental.duration }}</td>
+            <td>${{ rental.bicycle.rate }}</td>
+            <td><strong>${{ rental.total_cost }}</strong></td>
+    </tr>
+{% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
