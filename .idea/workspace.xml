@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1849f51-7e6a-4922-94ec-c49993f77590" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rental/templates/new_customer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rental/templates/view_rentals.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rental/static/rental/images/banner_image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rental/templates/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/rental/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/rental/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental/templates/add_rental.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental/templates/add_rental.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bike_store/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bike_store/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental/static/rental/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/rental/static/rental/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rental/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental/templates/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental/templates/customers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental/templates/view_rentals.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental/templates/view_rentals.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rental/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/rental/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rental/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/rental/views.py" afterDir="false" />
     </list>

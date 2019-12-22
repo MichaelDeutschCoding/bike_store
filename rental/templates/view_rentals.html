@@ -30,6 +30,7 @@
 <table class="table" style="background: rgba(255,255,255, 0.5)">
     <thead>
     <tr>
+        <th scope="col">Rental Number</th>
         <th scope="col">Customer ID</th>
         <th scope="col">Customer Name</th>
         <th scope="col">Email</th>
@@ -46,10 +47,11 @@
     <tbody>
         {% for rental in page_obj %}
         <tr>
-            <td>{{ rental.customer.id }}</td>
+            <td><strong>{{ rental.id }}</strong></td>
+            <td><a style="color:black" href="{% url 'view-single-customer' rental.customer.id %}">{{ rental.customer.id }}</a></td>
             <td>{{ rental.customer.first_name }} {{ rental.customer.last_name }}</td>
             <td>{{ rental.customer.email }}</td>
-            <td>{{ rental.bicycle.id }}</td>
+            <td><a style="color:black" href="{% url 'view-bike' rental.bicycle.id %}">{{ rental.bicycle.id }}</a></td>
             <td>${{ rental.bicycle.real_cost }}</td>
             <td>{{ rental.bicycle }}</td>
             <td>{{ rental.start_date }}</td>
